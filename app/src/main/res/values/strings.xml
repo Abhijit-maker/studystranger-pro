@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Study Stranger Pro</string>
+    <string name="app_url">https://studystranger-pro.ai.studio</string>
+    <string name="offline_title">No Internet Connection</string>
+    <string name="offline_message">Please check your connection and tap retry to continue learning.</string>
+    <string name="retry">Retry</string>
+    <string name="press_again_to_exit">Press back again to exit</string>
+    <string name="downloading_file">Downloading file...</string>
+    <string name="permission_camera_mic">Microphone and Camera permission is required for AI Voice Mentor and mock tests.</string>
+</resources>
