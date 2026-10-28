@@ -16,6 +16,13 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Convert logo to valid PNG
+        run: |
+          if [ -f app/src/main/res/drawable/app_logo.jpg ]; then
+            convert app/src/main/res/drawable/app_logo.jpg -resize 512x512 app/src/main/res/drawable/app_logo.png
+            rm -f app/src/main/res/drawable/app_logo.jpg
+          fi
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
