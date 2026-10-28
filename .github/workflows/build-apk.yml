@@ -19,7 +19,8 @@ jobs:
       - name: Convert logo to valid PNG
         run: |
           if [ -f app/src/main/res/drawable/app_logo.jpg ]; then
-            convert app/src/main/res/drawable/app_logo.jpg -resize 512x512 app/src/main/res/drawable/app_logo.png
+            python3 -m pip install pillow --break-system-packages
+            python3 -c "from PIL import Image; Image.open('app/src/main/res/drawable/app_logo.jpg').convert('RGBA').save('app/src/main/res/drawable/app_logo.png')"
             rm -f app/src/main/res/drawable/app_logo.jpg
           fi
 
